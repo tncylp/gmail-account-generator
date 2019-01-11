@@ -14,14 +14,14 @@ public class example {
         Configuration.startMaximized = true;
         Configuration.holdBrowserOpen = true;
         System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDrivers\\chromedriver\\chromedriver.exe");
+
     }
 
     @Test
     public void goToGmailDotCom(){
         HomePage homePage = new HomePage();
 
-        open("http://www.gmail.com");
-
+        homePage.openHomePage();
         homePage.clickCreateAccountBTN();
     }
 }
