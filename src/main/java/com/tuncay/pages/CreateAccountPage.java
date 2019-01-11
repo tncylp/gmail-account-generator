@@ -1,6 +1,7 @@
 package com.tuncay.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import com.tuncay.common.Tusable;
 import org.openqa.selenium.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
@@ -12,5 +13,15 @@ public class CreateAccountPage {
     private SelenideElement PASSWORD_TXT = $(By.xpath("//input[@name='Passwd']"));
     private SelenideElement CONFIRM_BTN = $(By.xpath("//input[@name='ConfirmPasswd']"));
     private SelenideElement ACC_DETAILS_NEXT_BTN = $(By.xpath("//div[@id='accountDetailsNext']//span[@class='RveJvd snByac']"));
-    
+
+    public void enterUsername(){
+        USERNAME_TXT.sendKeys(Tusable.getRandomUsername());
+    }
+
+    public void enterUsername(String firstname){
+        USERNAME_TXT.sendKeys(Tusable.getRandomUsername(firstname));
+    }
+
+
+
 }

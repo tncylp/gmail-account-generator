@@ -1,6 +1,7 @@
 package com.tuncay.trials;
 
 import com.codeborne.selenide.Configuration;
+import com.tuncay.pages.CreateAccountPage;
 import com.tuncay.pages.HomePage;
 import org.openqa.selenium.*;
 import org.junit.*;
@@ -20,9 +21,11 @@ public class example {
     @Test
     public void goToGmailDotCom(){
         HomePage homePage = new HomePage();
+        CreateAccountPage createAccountPage = new CreateAccountPage();
 
         homePage.openHomePage();
         homePage.clickCreateAccountBTN();
+        createAccountPage.enterUsername();
 
         // cca.liamg
     }
