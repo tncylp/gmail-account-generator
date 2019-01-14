@@ -25,7 +25,13 @@ public class example {
 
         homePage.openHomePage();
         homePage.clickCreateAccountBTN();
+
+        createAccountPage.enterFirstname();
+        createAccountPage.enterLastname();
         createAccountPage.enterUsername();
+        createAccountPage.enterPassword();
+        createAccountPage.enterConfirmTXT();
+        createAccountPage.clickAccDetailsNextTXT();
 
         // cca.liamg
     }
